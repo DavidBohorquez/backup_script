@@ -35,5 +35,5 @@ jobs:
           password: ${{ secrets.EMAIL_PASSWORD }}
           from: ${{ secrets.EMAIL_USER }}
           subject: "CI Test Results"
-          to: blueplayer-10@hotmail.com # cedric.surquin@gmail.com
+          to: cedric.surquin@gmail.com
           body: "Salut Professeur Cédric, les tests unitaires du script de sauvegarde ont été exécutés."
