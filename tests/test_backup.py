@@ -7,11 +7,11 @@ def test_detect_os():
     assert backup.detect_os() in ["Windows", "Linux", "Darwin"]
     
 def test_get_backup_directory(mocker):
-    mock_home = Path("/tmp/fake/home")
+    mock_home = Path("/tmp/home")
     mocker.patch("pathlib.Path.home", return_value=mock_home)
 
     backup_dir = backup.get_backup_directory()
-    assert backup_dir == Path("/fake/home/backup")
+    assert backup_dir == Path("/tmp/home/backup")
 
 def test_create_backup(mocker):
     mocker.patch("backup.detect_os", return_value="Linux")
